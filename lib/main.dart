@@ -1,43 +1,72 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_circular_text/circular_text.dart';
 
 void main() {
-  runApp(Container(
-    decoration: const BoxDecoration(
-      color: Color.fromRGBO(225, 141, 255, 100),
-    ),
-    child: const Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            'Fit',
-            textDirection: TextDirection.ltr,
-            style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'bukhari',
-              fontSize: 63,
-            ),
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          color: Color.fromRGBO(225, 141, 255, 100),
+        ),
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: CircularText(
+                  children: [
+                    TextItem(
+                      text: Text(
+                        'Fit'.toUpperCase(),
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'bukhari',
+                          fontSize: 28,
+                        ),
+                      ),
+                      space: 12,
+                      startAngle: -90,
+                      startAngleAlignment: StartAngleAlignment.center,
+                      direction: CircularTextDirection.clockwise,
+                    ),
+                    TextItem(
+                      text: Text(
+                        'Match'.toUpperCase(),
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'bukhari',
+                          fontSize: 28,
+                        ),
+                      ),
+                      space: 10,
+                      startAngle: 90,
+                      startAngleAlignment: StartAngleAlignment.center,
+                      direction: CircularTextDirection.anticlockwise,
+                    ),
+                  ],
+                  radius: 120,
+                  position: CircularTextPosition.outside,
+                ),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Text(
+                '-',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'grandcru',
+                  fontSize: 113,
+                ),
+              ),
+              SizedBox(
+                width: 0,
+              ),
+            ],
           ),
-          Text(
-            '-',
-            textDirection: TextDirection.ltr,
-            style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'grandcru',
-              fontSize: 113,
-            ),
-          ),
-          Text(
-            'Match',
-            textDirection: TextDirection.ltr,
-            style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'bukhari',
-              fontSize: 63,
-            ),
-          ),
-        ],
+        ),
       ),
     ),
   ));
