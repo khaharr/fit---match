@@ -4,9 +4,15 @@ publish_to: 'none'
 version: 1.0.0+1
 environment:
   sdk: '>=3.2.0 <4.0.0'
+
 dependencies:
   flutter:
     sdk: flutter
+  elliptic_text: ^1.0.0
+  flutter_circular_text: "^0.3.1"
+  circular_profile_avatar: ^2.0.0
+  path_drawing: ^1.0.1
+
   cupertino_icons: ^1.0.2
 dev_dependencies:
   flutter_test:
@@ -17,4 +23,8 @@ flutter:
   fonts:
     - family: bukhari
       fonts:
-        - asset: assets/fonts/Bukhari_Script.ttf
+        - asset: police\Bukhari Script.ttf 
+   
+    - family: grandcru
+      fonts:
+        - asset: police\GrandCru-LightS.otf
