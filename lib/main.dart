@@ -20,7 +20,7 @@ void main() {
                     TextItem(
                       text: Text(
                         'Fit'.toUpperCase(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.black,
                           fontFamily: 'bukhari',
                           fontSize: 28,
@@ -34,7 +34,7 @@ void main() {
                     TextItem(
                       text: Text(
                         'Match'.toUpperCase(),
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.black,
                           fontFamily: 'bukhari',
                           fontSize: 28,
@@ -50,10 +50,10 @@ void main() {
                   position: CircularTextPosition.outside,
                 ),
               ),
-              SizedBox(
-                width: 20,
+              const SizedBox(
+                width: 200,
               ),
-              Text(
+              const Text(
                 '-',
                 style: TextStyle(
                   color: Colors.black,
@@ -61,9 +61,7 @@ void main() {
                   fontSize: 113,
                 ),
               ),
-              SizedBox(
-                width: 0,
-              ),
+              const SizedBox(),
             ],
           ),
         ),
